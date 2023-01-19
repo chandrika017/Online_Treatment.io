@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      
+      
+      <script src="src.js" defer></script>
+      <title>TELEMEDICINE</title>
+	  
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  
+	  
+	  <style>
+	  
+	  * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+	font-size:20px ; overflow-x:hidden; color:blue;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #330099;
+    color: white;
+	
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+	
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+	
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: .3rem;
+	
+}
+
+.navbar-links li:hover {
+    background-color: #330099;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+		
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+		
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+
+header{
+background-image:url("20200915_235840 (1).JPG");
+background-position:85% 15%;
+background-size:cover;
+
+background-repeat:no-repeat;
+height: 100vh;		
+}
+
+
+
+
+
+.main-nav li a:hover{
+border-bottom:5px solid #bf55ec;
+}	
+
+.main-content-header{
+	width: 1366px;
+	position: absolute;
+	top:55%;
+	left:55%;
+	transform:translate(-50%,-50%);
+}
+
+
+h1{
+	color:#330099;
+	font-size:120%;
+	word-spacing:5px;
+	letter-spacing:3px;
+	margin-bottom: 20px;
+	text-transform :uppercase;
+	font-weight: lighter;
+}
+
+.btn{
+	display:inline-block;
+	padding: 10px 30px;
+	font-weight:lighter;
+	text-decoration:none;
+	text-transform:uppercase;
+	border-radius:200px;
+	transition:background-color 0.2%, border 0.2% , color 0.2%;
+	
+}
+
+.btn-full{
+background-color:transparent;
+color:#330099;
+margin-right:15px;	
+border:3px solid #330099;
+}
+
+.btn-full:hover{
+background-color:#bf55ec;
+}
+ 
+	  </style>
+	  
+	  
+	  
+    </head>
+    <body>
+	<header>
+      <nav class="navbar">
+        <div class="brand-title">TELEMEDICINE</div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          
+		<ul class="main-nav animated slideInDown" id="check class">
+             <li><a href="scr.html">Home</a></li>
+              <li><a href="http://localhost/databagecccc/data.php">Registration</a></li>
+              <li><a href="aboutus.html">About us</a></li>
+               <li><a href="services.html">Services</a></li>
+		</ul>
+        </div>
+		</nav>
+		<div class="main-content-header">
+<h1><b><p>Welcome to telemedicine</p> <br>
+Please follow these steps:-<br>
+        Step 1:Choose doctor or Recent crisis<br>
+		Step 2:Registration<br>
+		Step 3:Payment<br>
+		Step 4:Appointment</b></h1>
+		<a href="choosedoctor.html" class="btn btn-full">Choose doctor</a>
+		<a href="recentcrisis.html" class="btn btn-full">Recent crisis</a>
+</div>
+		
+	</header>	
+      
+    </body>
+</html>
