@@ -1,0 +1,7 @@
+<?php
+
+$man='he is';
+
+echo $man;
+
+?>

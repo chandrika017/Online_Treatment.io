@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Register Form</title>
+  
+  <style>
+  body{
+  background:url("images (5).JPEG");
+ background-repeat:no-repeat;
+ background-size:cover;
+  }
+  table{
+  background-size:cover;
+  
+  }
+  
+  
+  </style>
+</head>
+<body>
+ <form action="data.php" method="POST">
+  <table>
+   <tr>
+    <td>Name :</td>
+    <td><input type="text" name="user_name" required></td>
+   </tr>
+    <tr>
+    <td>Address:</td>
+    <td><input type="text" name="user_address" required></td>
+   </tr>
+   <td>Phone no :</td>
+    <td> <input type="text" name="user_phone" required></td>
+     
+   </tr>
+   
+   <tr>
+    <td>Gender :</td>
+    <td>
+     <input type="radio" name="user_gender" value="m" required>Male
+     <input type="radio" name="user_gender" value="f" required>Female
+    </td>
+   </tr>
+   <tr>
+    <td>Age:</td>
+    <td><input type="text" name="user_age" required></td>
+   </tr>
+   <tr>
+    <td>Doctor SL.:</td>
+    <td><input type="text" name="user_doctorsl" required></td>
+   </tr>
+   <tr>
+    <td>Password :</td>
+    <td> <input type="text" name="user_password" required></td>
+     
+   </tr>
+   <tr>
+    <td><input type="Submit" value="Submit"></td>
+   </tr>
+  </table>
+ </form>
+</body>
+</html>
+<?php
+if(isset($_POST['submit'])){
+$name=$_POST['user_name'];
+$address=$_POST['user_address'];
+$phone=$_POST['user_phone'];
+$gender=$_POST['user_gender'];
+$age=$_POST['user_age'];
+$Doctor=$_POST['user_doctorsl'];
+$password=$_POST['user_password'];
+//databage connection
+$con= mysqli_connect('localhost','root','registrationform');
+if(!$con){
+echo "please try again";
+}
+//data insert code
+$sql="INSERT INTO user(user_name,user_address,user_phone,user_gender,user_age,user_doctorsl,user_password) values ('$name','$address','$phone','$gender','$age','$Doctor','$password')";
+$que=mysqli_query($con,$sql);
+if($que==true){
+?>
+<script>
+alert("Registration Successfull");
+</script>
+<?php
+}else{
+?>
+<script>
+alert("Registration Failed");
+</script>
+<?php
+}
+
+}
+
+?>
